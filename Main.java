@@ -26,7 +26,7 @@ public class Main extends JFrame
         super("ShowImageExample");
         
         frame = new JFrame("HAUPTFENSTER");
-        frame.setSize(1000,1000);
+        frame.setSize(500,500);
         frame.getContentPane().setBackground(Color.green);
         frame.add(new JLabel("Beispiel JLabel"));
         frame.setTitle("Pokemon");

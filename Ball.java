@@ -6,7 +6,7 @@ public class Ball extends Item
     String name;
     public int staerkeGeben()
     {
-     return stärke;
+        return stärke;
     }
     public void gibName()
     {
