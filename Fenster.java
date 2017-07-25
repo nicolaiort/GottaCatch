@@ -29,10 +29,10 @@ public class Fenster extends JFrame
         JLabel map=new JLabel(new ImageIcon("map.png"));
         add(map);
         JLabel icn=new JLabel(new ImageIcon("playericon.png"));
-        icn.setMinimumSize(5, 5);
-        icn.setPreferedSize(5, 5);
-        icn.setMaximumSize(5, 5);
+        add(icn);
+        icn.setPreferredSize(new Dimension(5, 5)); 
         icn.setLocation(100, 100);
+        
         
         addKeyListener(new KeyAdapter()
             {
