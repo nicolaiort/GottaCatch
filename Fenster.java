@@ -6,6 +6,8 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import java.awt.Dimension;
+
 
 public class Fenster extends JFrame
 {
@@ -28,10 +30,12 @@ public class Fenster extends JFrame
         setSize(new Dimension(500,500));
         JLabel map=new JLabel(new ImageIcon("map.png"));
         add(map);
-        JLabel icn=new JLabel(new ImageIcon("playericon.png"));
-        add(icn);
-        icn.setPreferredSize(new Dimension(5, 5)); 
+        ImageIcon imageIcon = new ImageIcon(new ImageIcon("playericon.png").getImage().getScaledInstance(5, 5, Image.SCALE_DEFAULT));
+        JLabel icn=new JLabel(/*new ImageIcon("playericon.png")*/ imageIcon);
+        icn.setSize(new Dimension(5, 5)); 
         icn.setLocation(100, 100);
+        add(map);
+        add(icn);
         
         
         addKeyListener(new KeyAdapter()
