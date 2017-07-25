@@ -7,7 +7,7 @@ public class Spiel
     private Thread thread1;
     public Spiel(String name)
     {
-        p=new Spieler(name,new Pokemon("Pickachu",4,50,10,new Attack(10, "tackle")));
+        p=new Spieler(name,new Pokemon("Pickachu",2,50,10,new Attack(10, "tackle")));
         Map m = new Map(p,thread1);
         p.mapSetzen(m);
         spiele();
