@@ -61,7 +61,7 @@ public class Kampf
     {
         int y = Integer.parseInt(fi);
         fighter= player.gibPokemon(y);
-        System.out.println("YAY!");
+        fighter.givestats();
     }
     
     public void angriffwaehlen() throws InterruptedException

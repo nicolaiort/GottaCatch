@@ -31,7 +31,7 @@ public class Main extends JFrame
         frame.setVisible(true);
         frame.add(new JLabel("Beispiel JLabel"));
         frame.setTitle("Pokemon");
-        JLabel map=new JLabel(new ImageIcon("test.png"));
+        JLabel map=new JLabel(new ImageIcon("map.png"));
         frame.add(map);
         setLocation(100, 100);
         
