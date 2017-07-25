@@ -188,7 +188,5 @@ public class Map
         return platte;
     }
     
-    
-    
 
 }
