@@ -192,7 +192,7 @@ public class Map extends JLabel
         return platte;
     }
     
-        public void paintComponent(Graphics g)
+    public void paintComponent(Graphics g)
     {
         super.paintComponent(g);
         
