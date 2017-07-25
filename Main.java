@@ -28,13 +28,12 @@ public class Main extends JFrame
         frame = new JFrame("HAUPTFENSTER");
         frame.setSize(1000,1000);
         frame.getContentPane().setBackground(Color.green);
-        frame.setVisible(true);
         frame.add(new JLabel("Beispiel JLabel"));
         frame.setTitle("Pokemon");
         JLabel map=new JLabel(new ImageIcon("map.png"));
         frame.add(map);
-        setLocation(100, 100);
-        
+        map.setLocation(100, 100);
+        frame.setVisible(true);
         //Color ausgewaehlteFarbe = JColorChooser.showDialog(null,"Farbauswahl", null);
         //JColorChooser colorChooser = new JColorChooser();
         //frame.getContentPane().add(colorChooser);
