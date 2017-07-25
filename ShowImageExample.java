@@ -43,3 +43,6 @@ public class ShowImageExample extends JFrame
          new ShowImageExample();
     }
 }
+
+// new Pokemon ("Welli",1,23,23,new Attack (8,"tackle"))
+// new Spieler("Peter",  new Pokemon ("Welli",1,23,23,new Attack (8,"tackle")))
