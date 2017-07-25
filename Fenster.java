@@ -17,7 +17,7 @@ public class Fenster extends JFrame
         p=s;
 
         // Fenstertitel (das was oben am Programm steht)
-        setTitle("Test");
+        setTitle("Pokemon");
 
         // das Fenster ist nicht in der Groesse veraenderbar
         setResizable(false);
@@ -28,6 +28,11 @@ public class Fenster extends JFrame
         setSize(new Dimension(500,500));
         JLabel map=new JLabel(new ImageIcon("map.png"));
         add(map);
+        JLabel icn=new JLabel(new ImageIcon("playericon.png"));
+        icn.setMinimumSize(5, 5);
+        icn.setPreferedSize(5, 5);
+        icn.setMaximumSize(5, 5);
+        icn.setLocation(100, 100);
         
         addKeyListener(new KeyAdapter()
             {
@@ -37,21 +42,25 @@ public class Fenster extends JFrame
                     if (evt.getKeyCode() == KeyEvent.VK_RIGHT)
                     {
                         p.nachRechts(true);
+                        repaint();
                     }
 
                     if (evt.getKeyCode() == KeyEvent.VK_LEFT )
                     {
                         p.nachLinks(true);
+                        repaint();
                     }
                     
                     if (evt.getKeyCode() == KeyEvent.VK_UP )
                     {
                         p.nachOben(true);
+                        repaint();
                     }
                     
                     if (evt.getKeyCode() == KeyEvent.VK_DOWN )
                     {
                         p.nachUnten(true);
+                        repaint();
                     }
                 }
 
@@ -60,21 +69,25 @@ public class Fenster extends JFrame
                     if (evt.getKeyCode() ==KeyEvent.VK_RIGHT)
                     {
                         p.nachRechts(false);
+                        repaint();
                     }
 
                     if (evt.getKeyCode() == KeyEvent.VK_LEFT )
                     {
                         p.nachLinks(false);
+                        repaint();
                     }
                     
                     if (evt.getKeyCode() == KeyEvent.VK_UP )
                     {
                         p.nachOben(false);
+                        repaint();
                     }
                     
                     if (evt.getKeyCode() == KeyEvent.VK_DOWN )
                     {
                         p.nachUnten(false);
+                        repaint();
                     }
                 }
             });
