@@ -27,7 +27,7 @@ public class ShowImageExample extends JFrame
     {
         super("ShowImageExample");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        getContentPane().add(new JLabel(new ImageIcon("/home/niggl/Pictures/Unbenannt.PNG")));
+        getContentPane().add(new JLabel(new ImageIcon("test.png")));
         pack();
         setVisible(true);
 
