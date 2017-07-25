@@ -11,7 +11,6 @@ public class Spiel
         Map m = new Map(p);
         p.mapSetzen(m);
         spiele();
-        p.setInfight(false);
         gameloop();
     }
     
