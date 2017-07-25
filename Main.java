@@ -31,7 +31,9 @@ public class Main extends JFrame
         frame.setVisible(true);
         frame.add(new JLabel("Beispiel JLabel"));
         frame.setTitle("Pokemon");
-        frame.add(new JLabel(new ImageIcon("test.png")));
+        JLabel map=new JLabel(new ImageIcon("test.png"));
+        frame.add(map);
+        setLocation(100, 100);
         
         //Color ausgewaehlteFarbe = JColorChooser.showDialog(null,"Farbauswahl", null);
         //JColorChooser colorChooser = new JColorChooser();
