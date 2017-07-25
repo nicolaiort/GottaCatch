@@ -4,11 +4,11 @@ import java.awt.event.*;
 public class Spiel
 {
     private Spieler p;
-    private Thread Thread;
+    private Thread thread1;
     public Spiel(String name)
     {
         p=new Spieler(name,new Pokemon("Pickachu",4,50,10,new Attack(10, "tackle")));
-        Map m = new Map(p);
+        Map m = new Map(p,thread1);
         p.mapSetzen(m);
         spiele();
         p.setInfight(false);
@@ -27,7 +27,7 @@ public class Spiel
     {
         try
         {
-            Thread.sleep(ms);
+            thread1.sleep(ms);
         }
         catch(InterruptedException ex)
         {

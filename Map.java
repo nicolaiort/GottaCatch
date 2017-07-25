@@ -8,8 +8,9 @@ public class Map
     private int[][] platte;
     private Random zufall;
     private DBGebiete db;
+    private Thread thread1;
     
-    public Map(Spieler neuerspieler)
+    public Map(Spieler neuerspieler, Thread t)
     {
         spieler = neuerspieler;
         xSpieler = spieler.gibX();
@@ -18,7 +19,7 @@ public class Map
         erstelleMap();
         zufall = new Random();
         db = new DBGebiete();
-
+        thread1 = t;
 
     }
 
@@ -178,7 +179,7 @@ public class Map
         Pokemon gegner = db.randomPoke();
         spieler.setInfight(true);
         try{
-            Kampf fight = new Kampf(gegner, spieler, this);
+            Kampf fight = new Kampf(gegner, spieler, this, thread1);
         }
         catch(InterruptedException nuchanne){};
     }

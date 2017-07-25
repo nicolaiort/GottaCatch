@@ -13,13 +13,15 @@ public class Kampf
     private Map maep;
     private int runde;
     public boolean weiter;
+    private Thread thread1;
 
-    public Kampf(Pokemon en, Spieler pl, Map maeb) throws InterruptedException
+    public Kampf(Pokemon en, Spieler pl, Map maeb, Thread t) throws InterruptedException
     {
         runde=1;
         weiter=false;
         enemy=en;
         player=pl;
+        thread1 = t;
         ki=new AI(enemy,this);
         maep=maeb;
         fighter=null;
