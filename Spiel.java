@@ -11,6 +11,7 @@ public class Spiel
         Map m = new Map(p);
         p.mapSetzen(m);
         spiele();
+        p.setInfight(false);
         gameloop();
     }
     
@@ -40,7 +41,7 @@ public class Spiel
         {
             p.refresh();
             wait(100);
-            while(p.returnInfight()==false)
+            while(p.returnInfight())
             {
                 wait(200);
             }
