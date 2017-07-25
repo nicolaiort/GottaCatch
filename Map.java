@@ -1,8 +1,5 @@
 import java.util.Random;
-import javax.swing.*;
-import java.awt.*;
-
-public class Map extends JLabel
+public class Map
 {
     private Spieler spieler;
     private int xSpieler;
@@ -192,13 +189,5 @@ public class Map extends JLabel
         return platte;
     }
     
-    public void paintComponent(Graphics g)
-    {
-        super.paintComponent(g);
-        
-          
-            g.setColor(Color.red);
-            g.fillRect(spieler.gibX(),spieler.gibY(),26,26);
 
-    }
 }

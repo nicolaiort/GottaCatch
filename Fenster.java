@@ -6,35 +6,32 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import java.awt.Dimension;
-
 
 public class Fenster extends JFrame
 {
     
     private Spieler p;
-    private Map m;
-    public Fenster(Spieler s, Map maep) 
+    public Fenster(Spieler s) 
     {
         super();
         p=s;
-        m=maep;
+
         // Fenstertitel (das was oben am Programm steht)
         setTitle("Pokemon");
 
         // das Fenster ist nicht in der Groesse veraenderbar
         setResizable(false);
 
-        setBackground(Color.red);
+        setBackground(Color.white);
         
         //Groesse des Fensters
         setSize(new Dimension(500,500));
         JLabel map=new JLabel(new ImageIcon("map.png"));
         add(map);
-        ImageIcon g=new ImageIcon("pokemon");
-        g.paintIcon(this,("pokemon.png"),0,0,this);
-        
-
+        // JLabel icn=new JLabel(new ImageIcon("playericon.png"));
+        // add(icn);
+        // icn.setPreferredSize(new Dimension(5, 5)); 
+        // icn.setLocation(100, 100);
         
         
         addKeyListener(new KeyAdapter()
@@ -95,6 +92,4 @@ public class Fenster extends JFrame
                 }
             });
     }
-    
-
 }

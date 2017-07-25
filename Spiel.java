@@ -4,12 +4,11 @@ import java.awt.event.*;
 public class Spiel
 {
     private Spieler p;
-    private Map m;
     private Thread thread1;
-    public Spiel()
+    public Spiel(String name)
     {
-        p=new Spieler("penis",new Pokemon("Pickachu",2,50,10,new Attack(10, "tackle")));
-        m = new Map(p,thread1);
+        p=new Spieler(name,new Pokemon("Pickachu",4,50,10,new Attack(10, "tackle")));
+        Map m = new Map(p,thread1);
         p.mapSetzen(m);
         spiele();
         gameloop();
@@ -17,7 +16,7 @@ public class Spiel
     
         public void spiele()
     {
-        Fenster spiel = new Fenster(p,m);
+        Fenster spiel = new Fenster(p);
         spiel.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         spiel.setVisible(true);
         spiel.setFocusable(true);
