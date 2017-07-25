@@ -3,6 +3,10 @@ import java.awt.*;
 import java.awt.event.*;
 import java.awt.Graphics;
 import java.awt.Image;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
 public class Fenster extends JFrame
 {
     
@@ -22,7 +26,9 @@ public class Fenster extends JFrame
         
         //Groesse des Fensters
         setSize(new Dimension(500,500));
-
+        JLabel map=new JLabel(new ImageIcon("map.png"));
+        add(map);
+        
         addKeyListener(new KeyAdapter()
             {
 
