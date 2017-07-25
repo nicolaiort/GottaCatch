@@ -25,7 +25,7 @@ public class Fenster extends JFrame
         // das Fenster ist nicht in der Groesse veraenderbar
         setResizable(false);
 
-        setBackground(Color.white);
+        setBackground(Color.red);
         
         //Groesse des Fensters
         setSize(new Dimension(500,500));
@@ -33,6 +33,8 @@ public class Fenster extends JFrame
         add(map);
         ImageIcon g=new ImageIcon("pokemon");
         g.paintIcon(this,("pokemon.png"),0,0,this);
+        
+
         
         
         addKeyListener(new KeyAdapter()
