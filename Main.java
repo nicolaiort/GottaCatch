@@ -45,14 +45,14 @@ public class Main
      
      
  
-//     public ShowImageExample()
-//     {
-//         super("ShowImageExample");
-//         setDefaultCloseOperation(EXIT_ON_CLOSE);
-//         add(new JLabel(new ImageIcon("c:/desktop.jpg")));
-//         pack();
-//         setVisible(true);
-//      }
+     public ShowImageExample()
+     {
+         super("ShowImageExample");
+         setDefaultCloseOperation(EXIT_ON_CLOSE);
+         add(new JLabel(new ImageIcon("test.png")));
+         pack();
+         setVisible(true);
+      }
   
     
 
