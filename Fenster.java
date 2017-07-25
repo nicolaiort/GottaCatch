@@ -13,11 +13,12 @@ public class Fenster extends JFrame
 {
     
     private Spieler p;
-    public Fenster(Spieler s) 
+    private JLabel m;
+    public Fenster(Spieler s, Map map) 
     {
         super();
         p=s;
-
+        m=map;
         // Fenstertitel (das was oben am Programm steht)
         setTitle("Pokemon");
 
@@ -28,7 +29,7 @@ public class Fenster extends JFrame
         
         //Groesse des Fensters
         setSize(new Dimension(500,500));
-        JLabel map=new JLabel(new ImageIcon("map.png"));
+        //map=new JLabel(new ImageIcon("map.png"));
         add(map);
         ImageIcon imageIcon = new ImageIcon(new ImageIcon("playericon.png").getImage().getScaledInstance(5, 5, Image.SCALE_DEFAULT));
         JLabel icn=new JLabel(/*new ImageIcon("playericon.png")*/ imageIcon);
@@ -97,5 +98,5 @@ public class Fenster extends JFrame
             });
     }
     
-    
+
 }
