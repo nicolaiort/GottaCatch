@@ -6,7 +6,7 @@ public class Spieler
     private int xPos;
     private int yPos;
     private boolean fight;
-    private LinkedList Items;
+    private LinkedList<Item> Items;
     private LinkedList<Pokemon> Pokemons;
     private boolean laufen;
     private Map map;
@@ -17,7 +17,7 @@ public class Spieler
         yPos = 0;
         fight = false;
         Name = NameNeu;
-        Items = new LinkedList();
+        Items = new LinkedList<Item>();
         Pokemons = new LinkedList<Pokemon>();
         AddPokemon(StartPokemon);
         laufen = true;
