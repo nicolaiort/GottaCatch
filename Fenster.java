@@ -31,8 +31,7 @@ public class Fenster extends JFrame
         setSize(new Dimension(500,500));
         //map=new JLabel(new ImageIcon("map.png"));
         add(map);
-        ImageIcon imageIcon = new ImageIcon(new ImageIcon("playericon.png").getImage().getScaledInstance(5, 5, Image.SCALE_DEFAULT));
-        JLabel icn=new JLabel(/*new ImageIcon("playericon.png")*/ imageIcon);
+        JLabel icn=new JLabel(new ImageIcon("pokeball.png"));
         icn.setSize(new Dimension(5, 5)); 
         icn.setLocation(100, 100);
         add(map);
