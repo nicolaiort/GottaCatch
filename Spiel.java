@@ -41,10 +41,6 @@ public class Spiel
         {
             p.refresh();
             wait(100);
-            while(p.returnInfight())
-            {
-                wait(200);
-            }
             
         }
         
