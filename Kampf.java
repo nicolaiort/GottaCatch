@@ -67,8 +67,8 @@ public class Kampf
     public void angriffwaehlen() throws InterruptedException
     {
         JFrame frame = new JFrame ("Angriff waelen");
-        frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
-        frame.setPreferredSize (new Dimension(100,20));
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setPreferredSize(new Dimension(400,100));
       
         frame.setLayout (new GridLayout ());
       
@@ -100,7 +100,7 @@ public class Kampf
     {
         JFrame frame = new JFrame (name);
         frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
-        frame.setPreferredSize (new Dimension(100,20));
+        frame.setPreferredSize(new Dimension(400,100));
       
         frame.setLayout (new GridLayout ());
       
