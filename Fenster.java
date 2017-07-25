@@ -24,7 +24,7 @@ public class Fenster extends JFrame
         // das Fenster ist nicht in der Groesse veraenderbar
         setResizable(false);
 
-        setBackground(Color.white);
+        setBackground(Color.red);
         
         //Groesse des Fensters
         setSize(new Dimension(500,500));
@@ -35,6 +35,8 @@ public class Fenster extends JFrame
         icn.setLocation(100, 100);
         add(map);
         add(icn);
+        
+
         
         
         addKeyListener(new KeyAdapter()
