@@ -128,7 +128,8 @@ public class Kampf
         {
             if(getr==enemy)
             {
-                //maep.KampfIstZuEndeIhrMongos();
+                player.setInfight(false);
+                System.out.println("Enemy besiegt");
             }
             else
             {
@@ -168,7 +169,8 @@ public class Kampf
         if(gef<70)
         {
             player.AddPokemon(enemy);
-            //maep.KampfIstZuEndeIhrMongos();
+            player.setInfight(false);
+            System.out.println("Pl");
         }
     }
 } 
