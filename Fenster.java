@@ -6,6 +6,12 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import java.awt.image.BufferedImage;
+import java.io.File; 
+import java.io.IOException; 
+import javax.imageio.ImageIO; 
+
+
 
 public class Fenster extends JFrame
 {
@@ -29,7 +35,10 @@ public class Fenster extends JFrame
         
         //Groesse des Fensters
         setSize(new Dimension(500,500));
-        mapImage=new BufferedImage("map.png");
+        try{
+        mapImage= ImageIO.read(new File("map.png"));
+    }
+    catch(IOException ererer){}
         map=new JPanel();
         add(map);
         // JLabel icn=new JLabel(new ImageIcon("playericon.png"));
