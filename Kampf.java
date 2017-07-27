@@ -47,6 +47,7 @@ public class Kampf
                     fighterWaehlen();
                 }
                 System.out.println("Wähle eine Attacke");
+                System.out.println("0 = Angriff, 1 = Fangen");
                 runde=runde+1;
                 angriffwaehlen();
             }
