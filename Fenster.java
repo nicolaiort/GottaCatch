@@ -38,13 +38,10 @@ public class Fenster extends JFrame
         mapImage= null;
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         mapImage = toolkit.getImage("map.png");
-        map = new PicturePanel(mapImage);
+        map = new PicturePanel(mapImage, p);
         getContentPane().add(map);
-        
-        Image icon= null;
-        icon = toolkit.getImage("pokeball.png");
-        PicturePanel Iconframe = new PicturePanel(icon);
-        getContentPane().add(Iconframe);
+        // Graphics g = map.getGraphics();
+        // map.paintplayer(g);
 
         // JLabel icn=new JLabel(new ImageIcon("playericon.png"));
         // add(icn);
@@ -61,25 +58,25 @@ public class Fenster extends JFrame
                     if (evt.getKeyCode() == KeyEvent.VK_RIGHT)
                     {
                         p.nachRechts(true);
-                        // repaint();
+                        repaint();
                     }
 
                     if (evt.getKeyCode() == KeyEvent.VK_LEFT )
                     {
                         p.nachLinks(true);
-                        // repaint();
+                        repaint();
                     }
                     
                     if (evt.getKeyCode() == KeyEvent.VK_UP )
                     {
                         p.nachOben(true);
-                        // repaint();
+                        repaint();
                     }
                     
                     if (evt.getKeyCode() == KeyEvent.VK_DOWN )
                     {
                         p.nachUnten(true);
-                        // repaint();
+                        repaint();
                     }
                 }
 
@@ -88,25 +85,25 @@ public class Fenster extends JFrame
                     if (evt.getKeyCode() ==KeyEvent.VK_RIGHT)
                     {
                         p.nachRechts(false);
-                        // repaint();
+                        repaint();
                     }
 
                     if (evt.getKeyCode() == KeyEvent.VK_LEFT )
                     {
                         p.nachLinks(false);
-                        // repaint();
+                        repaint();
                     }
                     
                     if (evt.getKeyCode() == KeyEvent.VK_UP )
                     {
                         p.nachOben(false);
-                        // repaint();
+                        repaint();
                     }
                     
                     if (evt.getKeyCode() == KeyEvent.VK_DOWN )
                     {
                         p.nachUnten(false);
-                        // repaint();
+                        repaint();
                     }
                 }
             });
@@ -116,7 +113,7 @@ public class Fenster extends JFrame
     public void repaint()
     {
         super.repaint();
-        System.out.println("RRR");
+        // System.out.println("RRR");
         Graphics g = map.getGraphics();
         g.drawImage(mapImage,20,20,this);
     }

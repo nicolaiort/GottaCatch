@@ -3,9 +3,10 @@ import java.awt.*;
 
 class PicturePanel extends JPanel {
    private Image image;
-
-   PicturePanel(Image image) {
+   private Spieler p;
+   PicturePanel(Image image, Spieler s) {
       this.image = image;
+      p=s;
    }
 
     @Override
@@ -14,7 +15,14 @@ class PicturePanel extends JPanel {
       if(image != null) {
          g.drawImage(image, 0, 0, this);
       }
+      g.drawRect(p.gibX()*5,p.gibY()*5,5,5);
    }
+   
+   // public void paintplayer(Graphics g)
+   // {
+       // super.paintComponent(g);
+       // g.drawRect(0,0,5,5);
+   // }
     // public static void main(String[] args) {
         // JFrame frame = new JFrame("Test1");
         // Image img = null;
