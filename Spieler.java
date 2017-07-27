@@ -18,7 +18,7 @@ public class Spieler
         fight = false;
         Name = NameNeu;
         Items = new LinkedList<Ball>();
-        addItem(new Ball(10,"Pokeball",10),1);
+        addItem(new Ball(10,"Pokeball",10),0);
         Pokemons = new LinkedList<Pokemon>();
         AddPokemon(StartPokemon);
         laufen = true;
@@ -189,7 +189,7 @@ public class Spieler
         {
             (Pokemons.get(i)).maxheal();
         }
-        addItem(new Ball(10,"Pokeball",1),1);
+        addItem(new Ball(10,"Pokeball",1),0);
     }
     
     public void allePokemonGeben()
