@@ -51,6 +51,6 @@ public class Pokemon
   {
    System.out.println(typ); 
   }
-}// Dienste
+}
 
 

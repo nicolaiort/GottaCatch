@@ -10,7 +10,6 @@ public class AI
         K=Ka;
     }
 
-    // Dienste
     public void machmalangriff()
     {
         try

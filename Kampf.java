@@ -51,10 +51,7 @@ public class Kampf
                 runde=runde+1;
                 angriffwaehlen();
             }
-        // while(runde==rundedavor)
-        // {
-            // thread1.sleep(200);
-        // }
+
     }
     
     public void fighterWaehlen() throws InterruptedException
@@ -88,12 +85,7 @@ public class Kampf
         d.getContentPane ().add (button);
         d.pack ();
         d.setVisible (true);
-        //frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-//         while(fighter==null)
-//         {
-//             thread1.sleep(200);
-//         }
-//         frame.dispose();
+
     }
     
     public void angriffff(int angr) throws InterruptedException
@@ -115,7 +107,6 @@ public class Kampf
     public void auswahlfenster(String name) throws InterruptedException
     {
         JDialog d = new JDialog(f1, true);
-        //frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
         d.setPreferredSize(new Dimension(400,100));
       
         d.setLayout (new GridLayout ());
@@ -128,38 +119,9 @@ public class Kampf
         d.getContentPane ().add (button);
         d.pack ();
         d.setVisible (true);
-        //frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-//         while(fighter==null)
-//         {
-//             thread1.sleep(200);
-//         }
-//         frame.dispose();
+
     }
-    
-//     public void auswahlfenster(String name) throws InterruptedException
-//     {
-//         JFrame frame = new JFrame (name);
-//         frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
-//         frame.setPreferredSize(new Dimension(400,100));
-//       
-//         frame.setLayout (new GridLayout ());
-//       
-//         final JTextField field1 = new JTextField(10);  
-//         frame.getContentPane ().add (field1);
-//       
-//         JButton button = new JButton ("Auswählen");
-//         button.addActionListener (new FooActionListener (field1, this));
-//         frame.getContentPane ().add (button);
-//         frame.pack ();
-//         frame.setVisible (true);
-//         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-//         while(fighter==null)
-//         {
-//             thread1.sleep(200);
-//         }
-//         frame.dispose();
-//     }
-    
+
     public void schadenausteilen(Pokemon getr, int sch) throws InterruptedException
     {
         int kp = getr.getdamaged(sch);

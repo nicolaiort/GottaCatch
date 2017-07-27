@@ -40,13 +40,6 @@ public class Fenster extends JFrame
         mapImage = toolkit.getImage("map.png");
         map = new PicturePanel(mapImage, p);
         getContentPane().add(map);
-        // Graphics g = map.getGraphics();
-        // map.paintplayer(g);
-
-        // JLabel icn=new JLabel(new ImageIcon("playericon.png"));
-        // add(icn);
-        // icn.setPreferredSize(new Dimension(5, 5)); 
-        // icn.setLocation(100, 100);
         
         
         
@@ -113,7 +106,6 @@ public class Fenster extends JFrame
     public void repaint()
     {
         super.repaint();
-        // System.out.println("RRR");
         Graphics g = map.getGraphics();
         g.drawImage(mapImage,20,20,this);
     }
