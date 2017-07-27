@@ -13,6 +13,7 @@ public class Spiel extends Thread
         p=new Spieler(name,new Pokemon("Pickachu",4,50,10,new Attack(10, "tackle")));
         Map m = new Map(p,this,f);
         p.mapSetzen(m);
+        System.out.print('\u000C');
         spiele();
        
     }
