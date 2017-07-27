@@ -186,6 +186,10 @@ public class Map
         Datenbank db= new Datenbank();
         Pokemon gegner = db.randomPoke();
         spieler.setInfight(true);
+        System.out.print('\u000C');
+        System.out.println("Du bist einem wilden Pokemon begegnet");
+        System.out.println("Das Gegnerische Pokemon ist:");
+        gegner.givestats();
         try{
             Kampf fight = new Kampf(gegner, spieler, this, thread1,f);
         }

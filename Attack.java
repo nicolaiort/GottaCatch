@@ -12,5 +12,9 @@ public class Attack
     {
      return strength;
     }
+    public void ausgabe()
+    {
+        System.out.println("Name: "+name+ " Stärke: " +strength);
+    }
 
 }

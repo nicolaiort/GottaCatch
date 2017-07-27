@@ -42,8 +42,10 @@ public class Kampf
             {    
                 if(fighter==null)
                 {
+                    System.out.println("Waehle ein Pokemon für den Kampf");
                     fighterWaehlen();
                 }
+                System.out.println("Wähle eine Attacke");
                 angriffwaehlen();
                 runde=runde+1;
             }
@@ -95,7 +97,7 @@ public class Kampf
     public void angriffff(int angr) throws InterruptedException
     {
         weiter=true;
-        System.out.println("Angriff wurde ausgewaelt");
+        System.out.println("Angriff wurde ausgewaehlt");
         schadenausteilen(enemy, fighter.getattackstrength(angr));
         weiter=false;
     }
@@ -152,17 +154,17 @@ public class Kampf
     public void schadenausteilen(Pokemon getr, int sch) throws InterruptedException
     {
         int kp = getr.getdamaged(sch);
-        System.out.println("Schaden wurde ausgeteilt");
+        System.out.println(sch + "Schaden wurde ausgeteilt");
         if(kp<2)
         {
             if(getr==enemy)
             {
                 player.setInfight(false);
-                System.out.println("Enemy besiegt");
+                System.out.println("Wildes Pokemon besiegt");
             }
             else
             {
-                System.out.println("Dein Pokemon wurde besiegt, bitte waele ein neues");
+                System.out.println("Dein Pokemon wurde besiegt, bitte waehle ein neues");
                 fighter=null;
                 fighterWaehlen();
                 while(fighter==null){thread1.sleep(200);}
