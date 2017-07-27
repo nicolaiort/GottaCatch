@@ -6,7 +6,7 @@ public class Spieler
     private int xPos;
     private int yPos;
     private boolean fight;
-    private LinkedList<Item> Items;
+    private LinkedList<Ball> Items;
     private LinkedList<Pokemon> Pokemons;
     private boolean laufen;
     private Map map;
@@ -17,10 +17,12 @@ public class Spieler
         yPos = 0;
         fight = false;
         Name = NameNeu;
-        Items = new LinkedList<Item>();
+        Items = new LinkedList<Ball>();
+        addItem(new Ball(10,"Pokeball",10),1);
         Pokemons = new LinkedList<Pokemon>();
         AddPokemon(StartPokemon);
         laufen = true;
+        inventar();
     }
     
     public void mapSetzen(Map m)
@@ -53,27 +55,31 @@ public class Spieler
         return Items.size();
     }
 
-    public void addItem(Item Item, int ID)
+    public void addItem(Ball Item, int ID)
     {
-        if(Items.get(ID)==null)
+        if(Items.size()<ID)
         {
-            Items.add(ID, Item);
+            Items.add(Item);
         }
         else
         {
-            Item i = (Item)Items.get(ID);
-            //i.erhoeheAnzahl();
+            Item i =Items.get(ID);
+            i.erhoeheAnzahl();
         }
     }
 
-    public boolean DeleteItem(int ID)
+        public boolean Itemvorhanden(int ID)
     {
         if(Items.get(ID) != null)
         {
-            // ((Item)Items.get(ID)).senke();
             return true;
         }
         return false;
+    }
+    
+    public void DeleteItem(int ID)
+    {
+        (Items.get(ID)).senke();
     }
 
     public void setInfight(boolean b)
@@ -88,7 +94,12 @@ public class Spieler
 
     public Pokemon gibPokemon(int i)
     {
-        return (Pokemon)Pokemons.get(i);
+        return Pokemons.get(i);
+    }
+    
+    public Ball gibItem(int i)
+    {
+        return Items.get(i);
     }
 
     public void refresh()
@@ -105,7 +116,7 @@ public class Spieler
 
                 if(map.laeuft(xPos+1,yPos))
                 {
-                    System.out.println("rechts");
+                    // System.out.println("rechts");
                     xPos=xPos+1;
                     map.schritt(xPos,yPos);
                     laufen=false;  
@@ -124,7 +135,7 @@ public class Spieler
 
                 if(map.laeuft(xPos-1,yPos))
                 {
-                    System.out.println("links");
+                    // System.out.println("links");
                     xPos=xPos-1;
                     map.schritt(xPos,yPos);
                     laufen=false;    
@@ -143,7 +154,7 @@ public class Spieler
 
                 if(map.laeuft(xPos,yPos-1))
                 {
-                    System.out.println("Oben");
+                    // System.out.println("Oben");
                     yPos=yPos-1;
                     map.schritt(xPos,yPos);
                     laufen=false;      
@@ -162,7 +173,7 @@ public class Spieler
 
                 if(map.laeuft(xPos,yPos+1))
                 {
-                    System.out.println("Unten");
+                    // System.out.println("Unten");
                     yPos=yPos+1;
                     map.schritt(xPos,yPos);
                     laufen=false;       
@@ -176,8 +187,9 @@ public class Spieler
     {
         for(int i=0; i < Pokemons.size(); i++)
         {
-            ((Pokemon)Pokemons.get(i)).maxheal();
+            (Pokemons.get(i)).maxheal();
         }
+        addItem(new Ball(10,"Pokeball",1),1);
     }
     
     public void allePokemonGeben()
@@ -185,9 +197,29 @@ public class Spieler
         for(int i=0; i < Pokemons.size(); i++)
         {
             System.out.println(i);
-            Pokemon p =(Pokemon)(Pokemons.get(i));
+            Pokemon p =(Pokemons.get(i));
             p.givestats();
         }
     }
-
+    
+    public void alleItemGeben()
+    {
+        for(int i=0; i < Items.size(); i++)
+        {
+            System.out.println(i);
+            Ball p =(Items.get(i));
+            p.givestats();
+        }
+    }
+    
+    public void inventar()
+    {
+        System.out.println("");
+        System.out.println("Pokemons:");
+        allePokemonGeben();
+        System.out.println("");
+        System.out.println("Items:");
+        alleItemGeben();
+        
+    }
 }

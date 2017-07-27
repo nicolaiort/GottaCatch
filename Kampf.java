@@ -35,8 +35,9 @@ public class Kampf
         int rundedavor=runde;
         if((runde % 2) == 0)
             {
-                ki.machmalangriff();
+                System.out.println("Das wilde Pokemon greift an");
                 runde=runde+1;
+                ki.machmalangriff();                
             }
             else
             {    
@@ -46,13 +47,13 @@ public class Kampf
                     fighterWaehlen();
                 }
                 System.out.println("Wähle eine Attacke");
-                angriffwaehlen();
                 runde=runde+1;
+                angriffwaehlen();
             }
-        while(runde==rundedavor)
-        {
-            thread1.sleep(200);
-        }
+        // while(runde==rundedavor)
+        // {
+            // thread1.sleep(200);
+        // }
     }
     
     public void fighterWaehlen() throws InterruptedException
@@ -95,11 +96,18 @@ public class Kampf
     }
     
     public void angriffff(int angr) throws InterruptedException
-    {
-        weiter=true;
-        System.out.println("Angriff wurde ausgewaehlt");
-        schadenausteilen(enemy, fighter.getattackstrength(angr));
-        weiter=false;
+    {       
+        if(angr == 0)
+        {
+            weiter=true;
+            System.out.println("Angriff wurde ausgewaehlt");
+            schadenausteilen(enemy, fighter.getattackstrength(angr));
+            weiter=false;
+        }
+        else
+        {
+            fangen(angr-1);
+        }
     }
     
     
@@ -154,13 +162,15 @@ public class Kampf
     public void schadenausteilen(Pokemon getr, int sch) throws InterruptedException
     {
         int kp = getr.getdamaged(sch);
-        System.out.println(sch + "Schaden wurde ausgeteilt");
+        System.out.println(sch + " Schaden wurde ausgeteilt");
         if(kp<2)
         {
             if(getr==enemy)
             {
                 player.setInfight(false);
+                System.out.print('\u000C');
                 System.out.println("Wildes Pokemon besiegt");
+                player.inventar();
             }
             else
             {
@@ -190,18 +200,23 @@ public class Kampf
         }
     }
    
-    public void fangen(Ball b)
+    public void fangen(int ID)
     {
+        Ball b = (Ball) player.gibItem(ID);
         int ballstrength = b.staerkeGeben();
         int hp = enemy.getrelativehp();
         Random generator = new Random();
         int brozend = generator.nextInt(101);
         int gef = brozend + hp - ballstrength;
+        player.DeleteItem(ID);
         if(gef<70)
         {
             player.AddPokemon(enemy);
             player.setInfight(false);
-            System.out.println("Pl");
+            System.out.print('\u000C');
+            System.out.println("Das wilde Pokemon wurde gefangen:");
+            enemy.givestats();
+            player.inventar();
         }
     }
 } 

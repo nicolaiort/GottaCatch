@@ -26,9 +26,10 @@ public class FooActionListenerZwei implements ActionListener {
       public void actionPerformed (ActionEvent eztrewq)
       {
          //System.out.println ("Pressed");
-         try{
-         kampf.angriffff(Integer.parseInt(field.getText()));
+         try
+         {
          System.out.println (field.getText() +" wurde ausgewählt");
+         kampf.angriffff(Integer.parseInt(field.getText()));
          d1.dispose();
         }
          catch(InterruptedException eztrewqqwertz){};

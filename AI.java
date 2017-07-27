@@ -13,14 +13,10 @@ public class AI
     // Dienste
     public void machmalangriff()
     {
-        Random generator = new Random();
-        int dmg = generator.nextInt(5)+1;
-        
         try
         {
             K.schadenrechner(0,mine);
         }
-        catch(InterruptedException qwertz){}
-        
+        catch(InterruptedException qwertz){}        
     }
 }

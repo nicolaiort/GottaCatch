@@ -9,7 +9,7 @@ public class Datenbank
    private static int feuerHp = 38;
    private static int pflanzeHp = 50;
    private Random r= new Random(100);
-   private static Attack tackle;
+   private static Attack tackle = new Attack(5,"Tackle");
    
    public Datenbank()
    {
