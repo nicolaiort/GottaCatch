@@ -184,6 +184,7 @@ public class Spieler
     {
         for(int i=0; i < Pokemons.size(); i++)
         {
+            System.out.println(i);
             Pokemon p =(Pokemon)(Pokemons.get(i));
             p.givestats();
         }

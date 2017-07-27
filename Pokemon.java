@@ -37,10 +37,9 @@ public class Pokemon
   }
   public void givestats()
   {
-    if(hp<=2)
-    {
-     System.out.println("Name: "+name+", Angriffspunkte: "+ap+", Lebenspunkte: "+hp);
-    }
+
+     System.out.println("Name: "+name+", Angriffspunkte: "+ap+", Lebenspunkte: "+hp+" / "+ maxHp);
+
   }
   public int getrelativehp()
   {
