@@ -46,6 +46,7 @@ public class Map
         ySpieler = y;
         //hier: Bildaktualisierung()
         gebiet = platte[x][y];
+        // System.out.println(gebiet);
         if(gebiet != 0 && gebiet !=1)
         {
             if(gebiet == 2)
@@ -71,47 +72,52 @@ public class Map
         {
             for( int j=0; j<100; j++)
             {
-                platte[i][j] = 3; 
+                platte[j][i] = 3; 
             }
         }
         
         //Hohes Gras:
-        for(int i=85; i<100; i++)//unten links
+
+        for( int j=0; j<27; j++)//unten links
         {
-            for( int j=0; j<27; j++)
+            for(int i=85; i<100; i++)
             {
-                platte[i][j] = 4; 
+                platte[j][i] = 4; 
             }
         }
-        for(int i=0; i<10; i++)//oben mitte
+
+        for( int j=50; j<57; j++)//oben mitte
         {
-            for( int j=50; j<57; j++)
+            for(int i=0; i<10; i++)
             {
-                platte[i][j] = 4; 
+                platte[j][i] = 4; 
             }
         }
-        for(int i=50; i<55; i++)//links mitte
+
+        for( int j=0; j<5; j++)//links mitte
         {
-            for( int j=0; j<5; j++)
+            for(int i=50; i<55; i++)
             {
-                platte[i][j] = 4; 
+                platte[j][i] = 4; 
             }
         }
-        for(int i=35; i<55; i++)//rechts mitte
+
+        for( int j=78; j<85; j++)//rechts mitte
         {
-            for( int j=78; j<85; j++)
+            for(int i=35; i<55; i++)
             {
-                platte[i][j] = 4; 
+                platte[j][i] = 4; 
             }
         }//
         
         
         //Fluss:
-        for(int i=0; i<100; i++)
+
+        for( int j=47; j<53; j++)
         {
-            for( int j=47; j<53; j++)
-            {
-                platte[i][j] = 0;
+            for(int i=0; i<100; i++)
+            {   
+                platte[j][i] = 0;
             }
         }
         
@@ -120,21 +126,21 @@ public class Map
         {
             for( int j=25; j<75; j++)
             {
-                platte[i][j] = 1;
+                platte[j][i] = 1;
             }
         }
          for(int i=10; i<90; i++)
         {
             for( int j=75; j<78; j++)
             {
-                platte[i][j] = 1;
+                platte[j][i] = 1;
             }
         }
          for(int i=0; i<90; i++)
         {
             for( int j=25; j<28; j++)
             {
-                platte[i][j] = 1;
+                platte[j][i] = 1;
             }
         }
         
@@ -142,7 +148,7 @@ public class Map
         {
             for( int j=18; j<28; j++)
             {
-                platte[i][j] = 1;
+                platte[j][i] = 1;
             }
         }
         
@@ -151,14 +157,14 @@ public class Map
         {
             for( int j=14; j<19; j++)
             {
-                platte[i][j] = 2;
+                platte[j][i] = 2;
             }
         }
          for(int i=87; i<92; i++)
         {
             for( int j=74; j<79; j++)
             {
-                platte[i][j] = 2;
+                platte[j][i] = 2;
             }
         }
     }
