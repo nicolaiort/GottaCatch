@@ -18,7 +18,7 @@ public class Spieler
         fight = false;
         Name = NameNeu;
         Items = new LinkedList<Ball>();
-        addItem(new Ball(10,"Pokeball",10),0);
+        addItem(new Ball(10,"Pokeball",10),1);
         Pokemons = new LinkedList<Pokemon>();
         AddPokemon(StartPokemon);
         laufen = true;
@@ -190,6 +190,9 @@ public class Spieler
             (Pokemons.get(i)).maxheal();
         }
         addItem(new Ball(10,"Pokeball",1),0);
+        System.out.print('\u000C');
+        System.out.println("Alle deine Pokemons wurden geheilt und du hast einen Pokeball bekommen");
+        inventar();
     }
     
     public void allePokemonGeben()
