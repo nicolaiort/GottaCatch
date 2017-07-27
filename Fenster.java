@@ -36,9 +36,9 @@ public class Fenster extends JFrame
         //Groesse des Fensters
         setSize(new Dimension(500,500));
         try{
-        mapImage= ImageIO.read(new File("map.png"));
-    }
-    catch(IOException ererer){}
+            mapImage= ImageIO.read(new File("map.png"));
+        }
+        catch(IOException ererer){}
         map=new JPanel();
         add(map);
         // JLabel icn=new JLabel(new ImageIcon("playericon.png"));
@@ -113,6 +113,6 @@ public class Fenster extends JFrame
         super.repaint();
         System.out.println("RRR");
         Graphics g = map.getGraphics();
-        g.drawImage(mapImage,5,5,this);
+        g.drawImage(mapImage,20,20,this);
     }
 }
