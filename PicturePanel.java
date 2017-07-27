@@ -15,17 +15,17 @@ class PicturePanel extends JPanel {
          g.drawImage(image, 0, 0, this);
       }
    }
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("Test1");
-        Image img = null;
-        String imgPfad = "map.png"; //edited
-        Toolkit toolkit = Toolkit.getDefaultToolkit();
-        img = toolkit.getImage(imgPfad);
-        frame.getContentPane().add(new PicturePanel(img));
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(500, 500);
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
-    }
+    // public static void main(String[] args) {
+        // JFrame frame = new JFrame("Test1");
+        // Image img = null;
+        // String imgPfad = "map.png"; //edited
+        // Toolkit toolkit = Toolkit.getDefaultToolkit();
+        // img = toolkit.getImage(imgPfad);
+        // frame.getContentPane().add(new PicturePanel(img));
+        // frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        // frame.setSize(500, 500);
+        // frame.setLocationRelativeTo(null);
+        // frame.setVisible(true);
+    // }
 }
  

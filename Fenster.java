@@ -38,7 +38,14 @@ public class Fenster extends JFrame
         mapImage= null;
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         mapImage = toolkit.getImage("map.png");
-        getContentPane().add(new PicturePanel(mapImage));
+        map = new PicturePanel(mapImage);
+        getContentPane().add(map);
+        
+        Image icon= null;
+        icon = toolkit.getImage("pokeball.png");
+        PicturePanel Iconframe = new PicturePanel(icon);
+        getContentPane().add(Iconframe);
+
         // JLabel icn=new JLabel(new ImageIcon("playericon.png"));
         // add(icn);
         // icn.setPreferredSize(new Dimension(5, 5)); 
