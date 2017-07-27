@@ -201,7 +201,7 @@ public class Kampf
         }
     }
    
-    public void fangen(int ID)
+    public void fangen(int ID) throws InterruptedException
     {
         Ball b = (Ball) player.gibItem(ID);
         int ballstrength = b.staerkeGeben();
@@ -218,6 +218,11 @@ public class Kampf
             System.out.println("Das wilde Pokemon wurde gefangen:");
             enemy.givestats();
             player.inventar();
+        }
+        else
+        {
+            System.out.println("Das wilde Pokemon wurde nicht gefangen:");
+            rundebeginnen();
         }
     }
 } 
