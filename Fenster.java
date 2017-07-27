@@ -17,8 +17,8 @@ public class Fenster extends JFrame
 {
     
     private Spieler p;
-    private JPanel map;
-    private BufferedImage mapImage;
+    private PicturePanel map;
+    private Image mapImage;
     
     public Fenster(Spieler s) 
     {
@@ -35,12 +35,10 @@ public class Fenster extends JFrame
         
         //Groesse des Fensters
         setSize(new Dimension(500,500));
-        try{
-            mapImage= ImageIO.read(new File("map.png"));
-        }
-        catch(IOException ererer){}
-        map=new JPanel();
-        add(map);
+        mapImage= null;
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        mapImage = toolkit.getImage("map.png");
+        getContentPane().add(new PicturePanel(mapImage));
         // JLabel icn=new JLabel(new ImageIcon("playericon.png"));
         // add(icn);
         // icn.setPreferredSize(new Dimension(5, 5)); 
@@ -56,25 +54,25 @@ public class Fenster extends JFrame
                     if (evt.getKeyCode() == KeyEvent.VK_RIGHT)
                     {
                         p.nachRechts(true);
-                        repaint();
+                        // repaint();
                     }
 
                     if (evt.getKeyCode() == KeyEvent.VK_LEFT )
                     {
                         p.nachLinks(true);
-                        repaint();
+                        // repaint();
                     }
                     
                     if (evt.getKeyCode() == KeyEvent.VK_UP )
                     {
                         p.nachOben(true);
-                        repaint();
+                        // repaint();
                     }
                     
                     if (evt.getKeyCode() == KeyEvent.VK_DOWN )
                     {
                         p.nachUnten(true);
-                        repaint();
+                        // repaint();
                     }
                 }
 
@@ -83,25 +81,25 @@ public class Fenster extends JFrame
                     if (evt.getKeyCode() ==KeyEvent.VK_RIGHT)
                     {
                         p.nachRechts(false);
-                        repaint();
+                        // repaint();
                     }
 
                     if (evt.getKeyCode() == KeyEvent.VK_LEFT )
                     {
                         p.nachLinks(false);
-                        repaint();
+                        // repaint();
                     }
                     
                     if (evt.getKeyCode() == KeyEvent.VK_UP )
                     {
                         p.nachOben(false);
-                        repaint();
+                        // repaint();
                     }
                     
                     if (evt.getKeyCode() == KeyEvent.VK_DOWN )
                     {
                         p.nachUnten(false);
-                        repaint();
+                        // repaint();
                     }
                 }
             });
